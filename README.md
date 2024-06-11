@@ -26,3 +26,19 @@ Visual Inertial Odometry (VIO) is a technique used in robotics and autonomous sy
 ### 3.Sensor Fusion:-
 * VIO combines the strengths of both visual and inertial sensors by fusing their data in a tightly coupled manner.
 * The visual measurements provide absolute pose updates to correct the drift in the inertial measurements, while the inertial measurements help maintain pose estimates during rapid motions or when visual features are unavailable.
+
+## Integration of Single-Track Dynamics with VIO
+* Imagine you have a robot with a camera and an inertial measurement unit (IMU) mounted on it. The camera and IMU have a fixed position and orientation relative to the robot's body frame (called the extrinsic transformation).
+* The visual-inertial odometry (VIO) system estimates the 6-DoF pose (position and orientation) of the camera-IMU frame relative to the world frame at each timestep, using the camera images and IMU measurements.
+* We are interested in the 3-DoF motion (2D position and heading angle) of the robot's body frame relative to the world frame, as the robot is a ground vehicle constrained to move on a flat surface.
+To compare the 6-DoF camera-IMU motion estimated by the VIO with the 3-DoF robot body motion predicted by the dynamics model, we need to transform the VIO estimate into the robot's body frame.
+## Implementation
+##### Used:-
+A 1/10 scale electric car
+equipped with a Realsense T265 stereo-fisheye camera with
+built-in IMU.![Electric_car](https://github.com/vishapraj/Online-Calibration-of-a-Single-Track-Ground-Vehicle-Dynamics-Model/assets/126682925/79bd2090-f3f6-4331-b4f5-d203e3211931)
+
+* Evaluated tracking and prediction accuracy in various scenarios and compare with the original VIO.
+### Results
+![Integration_Result](https://github.com/vishapraj/Online-Calibration-of-a-Single-Track-Ground-Vehicle-Dynamics-Model/assets/126682925/fd3e7d79-c31f-43d3-b569-34cb858b7abc)
+
