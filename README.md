@@ -42,3 +42,5 @@ built-in IMU.![Electric_car](https://github.com/vishapraj/Online-Calibration-of-
 ### Results
 ![Integration_Result](https://github.com/vishapraj/Online-Calibration-of-a-Single-Track-Ground-Vehicle-Dynamics-Model/assets/126682925/fd3e7d79-c31f-43d3-b569-34cb858b7abc)
 
+#### Tracking Accuracy Evaluation
+ The tracking accuracy of the proposed ST-VIO method is evaluated by comparing the relative pose error (RPE) with the original VIO approach. The results show that ST-VIO generally improves trajectory accuracy for indoor sequences. However, the outdoor data with bumpy terrain poses challenges for the single-track dynamics model. 
